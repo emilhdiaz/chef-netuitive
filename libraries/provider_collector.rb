@@ -2,7 +2,7 @@ class NetuitiveCookbook::NetuitiveCollectorProvider < Chef::Provider
   include NetuitiveCookbook::Helpers
   provides :netuitive_collector if defined?(provides)
 
-  use_inline_resources
+  use_inline_resources if defined?(use_inline_resources)
 
   action :create do
     unless new_resource.custom_collectors

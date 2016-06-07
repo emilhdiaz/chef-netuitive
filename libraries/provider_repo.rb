@@ -2,7 +2,7 @@ class NetuitiveCookbook::NetuitiveRepoProvider < Chef::Provider
   include NetuitiveCookbook::Helpers
   provides :netuitive_repo if defined?(provides)
 
-  use_inline_resources
+  use_inline_resources if defined?(use_inline_resources)
 
   action :add do
     platform = determine_platform
