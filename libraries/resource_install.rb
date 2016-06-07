@@ -1,5 +1,4 @@
 class NetuitiveCookbook::NetuitiveInstallResource < Chef::Resource::LWRPBase
-  resource_name :netuitive_install
   provides :netuitive_install
 
   actions :install
