@@ -1,6 +1,6 @@
-class NetuitiveCookbook::NetuitiveConfigureResource < Chef::Resource::LWRPBase
+class NetuitiveCookbook::NetuitiveConfigureResource < Chef::Resource
   resource_name :netuitive_configure
-  provides :netuitive_configure
+  provides :netuitive_configure if defined?(provides)
 
   actions :create
   default_action :create

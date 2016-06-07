@@ -4,9 +4,9 @@
 #
 
 # Chef Resource for setting up a netuitive_repo
-class NetuitiveCookbook::NetuitiveRepoResource < Chef::Resource::LWRPBase
+class NetuitiveCookbook::NetuitiveRepoResource < Chef::Resource
   resource_name :netuitive_repo
-  provides :netuitive_repo
+  provides :netuitive_repo if defined?(provides)
 
   actions :add
   default_action :add

@@ -1,6 +1,6 @@
-class NetuitiveCookbook::NetuitiveRepoProvider < Chef::Provider::LWRPBase
+class NetuitiveCookbook::NetuitiveRepoProvider < Chef::Provider
   include NetuitiveCookbook::Helpers
-  provides :netuitive_repo
+  provides :netuitive_repo if defined?(provides)
 
   use_inline_resources
 
